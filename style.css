@@ -1,0 +1,562 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #b7efcd;
+}
+
+.pageTitle h2 {
+    text-align: center;
+    font-size: 3rem;
+    display: inline-block;
+    margin: 0px 10px;
+    text-transform: uppercase;
+}
+
+.pageTitle {
+    padding: 2vh 0;
+    text-align: center;
+    background-color: #4cd3c2;
+    color: #363636;
+}
+
+button {
+    border: 0;
+}
+
+.addButton {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 2vw;
+    background-color: #363636;
+    color: #4cd3c2;
+    font-size: 1.4rem;
+    padding: 0 .5rem;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.addButton:hover {
+    transform: scale(1.05);
+}
+
+main {
+    padding: 5vh 0;
+    margin: 0vh auto;
+    max-width: 60vw;
+    min-height: 88vh;
+    background-color: #ffbcbc;
+}
+
+.addbook {
+    display: block;
+    background-color: #363636;
+    color: #4cd3c2;
+}
+
+.formbackground {
+    background-color: #363636;
+    color: #4cd3c2;
+}
+
+.hidebook {
+    display: none;
+    transition: all 0.5s;
+}
+
+.books {
+    margin: 5vh 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(30vh, auto);
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vh;
+}
+
+.book {
+    padding: 1rem;
+    background-color: #4cd3c2;
+    border: 2px solid #363636;
+    color: #363636;
+    border-left: 2vw solid #363636;
+}
+
+.book_span {
+    background-color: #b7efcd;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: .1rem .4rem;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.book_span:hover {
+    transform: scale(1.05);
+}
+
+.book-title {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.author {
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.pages {
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+
+.read {
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+
+.delButton {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    background-color: #363636;
+    color: #ffbcbc;
+    padding: 0 .5rem;
+    margin: .5rem 0rem;
+    float: right;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.delButton:hover {
+    transform: scale(1.05);
+}
+
+.plus {
+    margin: auto .5rem;
+}
+
+form {
+    margin: 1vh auto;
+    padding: 1rem 0;
+}
+
+form p {
+    color: #ff2626;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+input[type="text"] {
+    font-size: 1.2rem;
+}
+
+input:invalid {
+    color: #ff0a0a;
+}
+
+.submitButton {
+    display: block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background-color: #4cd3c2;
+    color: #363636;
+    margin: 2vh auto;
+    padding: 0 .5rem;
+    transform: scale(1);
+}
+
+.submitButton:hover {
+    transform: scale(1.05);
+}
+
+.book-detail {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4rem;
+}
+
+/*media queries*/
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .pageTitle {
+        padding: 1vh 0;
+    }
+
+    form {
+        margin: 1vh auto;
+        padding: .5rem 0;
+    }
+
+    .books {
+        grid-template-rows: minmax(auto, auto);
+        grid-column-gap: 1vw;
+        grid-row-gap: 1vh;
+    }
+
+    .book-title {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    form label {
+        font-size: 1.2rem;
+    }
+
+    form p {
+        color: #ff2626;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+    }
+
+    input:invalid {
+        color: #ff0a0a;
+    }
+
+    .submitButton {
+        font-size: 1.2rem;
+        margin: 1vh auto;
+    }
+
+    .book_span {
+        font-size: 1.1rem;
+        padding: 0rem .2rem;
+    }
+
+    .book-title {
+        font-size: 1.5rem;
+    }
+
+    .author {
+        font-size: 1.1rem;
+    }
+
+    .pages {
+        font-size: 1.1rem;
+    }
+
+    .read {
+        font-size: 1.1rem;
+    }
+
+    .delButton {
+        font-size: 1.1rem;
+        padding: 0 .5rem;
+        margin: .5rem 0rem;
+    }
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    main {
+        max-width: 80vw;
+        height: 88vh;
+    }
+
+    .pageTitle {
+        padding: .5vh 0;
+    }
+
+    form {
+        margin: 1vh auto;
+        padding: .5rem 0;
+    }
+
+    .addButton {
+        font-size: 1.2rem;
+        padding: 0 .5rem;
+    }
+
+    .books {
+        margin: 3vh 0px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: minmax(auto, auto);
+        grid-column-gap: 2vw;
+        grid-row-gap: 2vh;
+    }
+
+    .title-section,
+    .author-section,
+    .pages-section,
+    .read-section {
+        padding: .5rem;
+    }
+
+    .book-title {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    form label {
+        font-size: 1.1rem;
+    }
+
+    form p {
+        color: #ff2626;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+
+    }
+
+    input:invalid {
+        color: #ff0a0a;
+    }
+
+    .submitButton {
+        font-size: 1.2rem;
+        margin: .5vh auto;
+    }
+
+    .book_span {
+        font-size: 1.1rem;
+        padding: 0rem .2rem;
+    }
+
+    .book-title {
+        font-size: 1.5rem;
+    }
+
+    .author {
+        font-size: 1.1rem;
+    }
+
+    .pages {
+        font-size: 1.1rem;
+    }
+
+    .read {
+        font-size: 1.1rem;
+    }
+
+    .delButton {
+        font-size: 1.1rem;
+        padding: 0 .5rem;
+        margin: .5rem 0rem;
+    }
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    main {
+        max-width: 80vw;
+        height: 88vh;
+    }
+
+    .pageTitle {
+        padding: .5vh 0;
+    }
+
+    form {
+        margin: 1vh auto;
+        padding: .5rem 0;
+    }
+
+    .addButton {
+        font-size: 1.2rem;
+        padding: 0 .5rem;
+    }
+
+    .books {
+        margin: 3vh 0px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: minmax(auto, auto);
+        grid-column-gap: 2vw;
+        grid-row-gap: 2vh;
+    }
+
+    .title-section,
+    .author-section,
+    .pages-section,
+    .read-section {
+        padding: .5rem;
+    }
+
+    .book-detail {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1rem;
+        flex-direction: column;
+        margin-left: 2vw;
+    }
+
+    .book-title {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    form label {
+        font-size: 1.1rem;
+    }
+
+    form p {
+        color: #ff2626;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+
+    }
+
+    input:invalid {
+        color: #ff0a0a;
+    }
+
+    .submitButton {
+        font-size: 1.2rem;
+        margin: .5vh auto;
+    }
+
+    .book_span {
+        font-size: 1.1rem;
+        padding: 0rem .2rem;
+    }
+
+    .book-title {
+        font-size: 1.5rem;
+    }
+
+    .author {
+        font-size: 1.1rem;
+    }
+
+    .pages {
+        font-size: 1.1rem;
+    }
+
+    .read {
+        font-size: 1.1rem;
+    }
+
+    .delButton {
+        font-size: 1.1rem;
+        padding: 0 .5rem;
+        margin: .5rem 0rem;
+    }
+
+}
+
+@media all and (max-width: 480px) {
+      main {
+        max-width: 80vw;
+        height: 88vh;
+        max-height:auto;
+        overflow:scroll;
+    }
+
+    .pageTitle {
+        padding: .5vh 0;
+    }
+
+    form {
+        margin: 1vh auto;
+        padding: .5rem 0;
+    }
+
+    .addButton {
+        font-size: 1.2rem;
+        padding: 0 .5rem;
+    }
+
+    .books {
+        margin: 3vh 15vw;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: minmax(auto, auto);
+        grid-column-gap: 2vw;
+        grid-row-gap: 2vh;
+    }
+
+    .title-section,
+    .author-section,
+    .pages-section,
+    .read-section {
+        padding: .5rem;
+    }
+
+    .book-detail {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1rem;
+        flex-direction: column;
+        margin-left: 2vw;
+    }
+
+    .book-title {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    form label {
+        font-size: 1.1rem;
+    }
+
+    form p {
+        color: #ff2626;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+
+    }
+
+    input:invalid {
+        color: #ff0a0a;
+    }
+
+    .submitButton {
+        font-size: 1.2rem;
+        margin: .5vh auto;
+    }
+
+    .book_span {
+        font-size: 1.1rem;
+        padding: 0rem .2rem;
+    }
+
+    .book-title {
+        font-size: 1.5rem;
+    }
+
+    .author {
+        font-size: 1.1rem;
+    }
+
+    .pages {
+        font-size: 1.1rem;
+    }
+
+    .read {
+        font-size: 1.1rem;
+    }
+
+    .delButton {
+        font-size: 1.1rem;
+        padding: 0 .5rem;
+        margin: .5rem 0rem;
+    }
+}

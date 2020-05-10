@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODIN LIBRARY</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7cf0ce6bd0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <section class="pageTitle">
+            <i class="fas fa-book fa-3x"></i>
+            <h2>ODIN's Library</h2>
+        </section>
+    </header>
+    <main>
+        <button class="addButton"> <i class="fas fa-plus fa-sm plus"></i>Add a Book</button>
+        <section class="addingBook">
+            <div class="hidebook">
+                <form novalidate>
+                   <section class="book-detail">
+                       <section class="title-section">
+                        <label for="book_title">Title :</label>
+                        <input id="book_title" type="text" maxlength="50" minlength="1" required  pattern="([A-Za-z])\w\D+">
+                    </section>
+                    <section class="author-section">
+                        <label for="book_author">Author :</label>
+                        <input id="book_author" type="text" maxlength="50" minlength="1" required  pattern="([A-Za-z])\w\D+">
+                    </section>
+                    <section class="pages-section">
+                        <label for="book_pages">Pages :</label>
+                        <input id="book_pages" type="number" min="5" max="300" required>
+                    </section>
+                    <section class="read-section">
+                        <label>Read The Book ?</label>
+                        <input id="book_yes" type="radio" value="yes" required="required"/> <label for="book_yes">yes</label>
+                        <input id="book_no" type="radio" value="no" required="required" /> <label for="book_no">No</label>
+                    </section>
+                   </section>
+                   <p> </p>
+                    <button class="submitButton">Submit</button>
+                </form>
+            </div>
+        </section>
+        <section class="books">
+            <section class="book">
+                <h5 class="book-title">Harry Potter </h5>
+                <p class="author">j k rowling</p>
+                <p class="pages">120 pages</p>
+                <p class="read">read : <span class="book_span" >yes</span></p>
+                <button class="delButton"><i class="fas fa-minus fa-xs"></i> Delete</button>
+            </section>
+
+            <section class="book">
+                <h5 class="book-title">GooseBumps</h5>
+                <p class="author">R.l stein</p>
+                <p class="pages">220 pages</p>
+                <p class="read">read : <span class="book_span" >No</span></p>
+                <button class="delButton" ><i class="fas fa-minus fa-xs"></i> Delete</button>
+            </section>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body></html>
